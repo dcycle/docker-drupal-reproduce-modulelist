@@ -38,6 +38,9 @@ class App {
     }
   }
 
+  /**
+   * Populates the $dl array based on a line of output from the database.
+   */
   public function downloadString($line, &$dl) {
     $processed = $this->process($line);
     if (empty($processed['project'])) {
@@ -48,6 +51,9 @@ class App {
     }
   }
 
+  /**
+   * Populates the $en array based on a line of output from the database.
+   */
   public function enString($line, &$en) {
     $processed = $this->process($line);
     if (empty($processed['name'])) {
@@ -56,7 +62,10 @@ class App {
     $en[md5($processed['name'])] = 'drush en -y ' . $processed['name'];
   }
 
-  public function process($line) {
+  /**
+   * Processes a line of output from "select filename,info from system".
+   */
+  public function process(string $line) : array {
     $return = [];
 
     $matches = [];
