@@ -1,6 +1,8 @@
 Drupal reproduce module list
 =====
 
+[![CircleCI](https://circleci.com/gh/dcycle/docker-drupal-reproduce-modulelist.svg?style=svg)](https://circleci.com/gh/dcycle/docker-drupal-reproduce-modulelist)
+
 Reproduce the list of modules and their projects for an existing Drupal site.
 
 Usage
